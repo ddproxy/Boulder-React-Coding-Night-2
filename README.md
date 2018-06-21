@@ -63,4 +63,4 @@ https://www.googleapis.com/civicinfo/v2/voterinfo?key=[key]&electionId=2000&addr
 ### Extra Credit
 * Make a progressive web app
 * User can save to desktop
-* User can persist address
+* User can persist address.
