@@ -45,10 +45,10 @@ class CandidateView extends Component{
   render(){
     return(
       <div className='candidateViewContainer flex flex-col'>
-        <h1>{this.props.candidate.name} - {this.props.candidate.party}</h1>
-        <a href={this.props.candidate.candidateUrl}>{this.props.candidate.name}'s Website</a>
+        <h1>{this.props.name} - {this.props.party}</h1>
+        <a href={this.props.candidateUrl}>{this.props.name}'s Website</a>
         <div className='socialMediaContainer flex jc-space-between'>
-          {this.props.candidate.channels && this.props.candidate.channels.map((c)=> {
+          {this.props.channels && this.props.channels.map((c)=> {
             let image;
             switch(c.type){
               case 'Facebook':
