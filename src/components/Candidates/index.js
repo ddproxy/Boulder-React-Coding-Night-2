@@ -7,9 +7,7 @@ class Candidates extends Component {
     super(props);
     this.state = {
       data: [],
-      open: false
     };
-    this.handleNestedToggle = this.handleNestedToggle.bind(this);
   }
 
   componentWillMount(){
@@ -19,12 +17,6 @@ class Candidates extends Component {
       .then(res => {
         this.setState({data : res.data.contests});
       });
-  }
-
-  handleNestedToggle (item) {
-    this.setState({
-      open : item.state.open
-    });
   }
 
   render(){
@@ -42,10 +34,9 @@ class Candidates extends Component {
         <ListItem 
           key={index}
           primaryText={contest.office}
-          open={this.state.open}
-          onNestedListToggle={this.handleNestedToggle}
           nestedItems={candidates}
-        />);
+        />
+      );
     });
     return (
       <div>
