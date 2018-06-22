@@ -10,6 +10,12 @@
 * Run `npm start`
 
 
+## Sync With Master Repo
+* git remote add upstream git@github.com:gooWee/Boulder-React-Coding-Night-2.git
+* git fetch upstream
+* git pull upstream master
+
+
 ## API Resources
 1) Get current representatives by address
 ```
