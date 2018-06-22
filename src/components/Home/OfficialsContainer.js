@@ -2,13 +2,8 @@ import React, { Component } from 'react'
 import { Tabs, Tab } from 'material-ui/Tabs'
 import { Card, CardHeader, CardText } from 'material-ui/Card'
 
-import { keyBy, map } from 'lodash'
+import { map } from 'lodash'
 import { Avatar, Chip } from 'material-ui'
-
-const selectDistricts = (party, civicInfo) => {
-
-}
-
 
 function OfficialItem ({ official, onClick }) {
 
@@ -35,7 +30,7 @@ function OfficialItem ({ official, onClick }) {
 
 }
 
-function OfficeCard ({office, officials,}) {
+function OfficeCard ({ office, officials, }) {
   return (
     <Card>
       <CardHeader
@@ -66,12 +61,8 @@ export default class OfficialsContainer extends Component {
 
   render () {
     const props = this.props
-    const {party, representatives} = props
-    console.log(representatives)
-    const {divisions, offices, officials} = representatives
-    console.log(divisions)
-    const officesByDivisions = keyBy(offices, 'divisionId')
-    console.log(officesByDivisions)
+    const { representatives } = props
+    const { divisions, offices, officials } = representatives
 
     return (
       <div>
@@ -85,7 +76,6 @@ export default class OfficialsContainer extends Component {
                 >
                   {
                     division.officeIndices.map(i => {
-
                       return (
                         <OfficeCard
                           key={i}
