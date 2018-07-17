@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './index.css';
 import data from './sample.js';
@@ -21,7 +22,7 @@ const Row = (props) => {
   const { name, electionDay, ocdDivisionId } = props;
   return (
     <TableRow>
-      <TableRowColumn>{ name }</TableRowColumn>
+      <TableRowColumn>{ <Link to="#">{name}</Link> }</TableRowColumn>
       <TableRowColumn>{ electionDay }</TableRowColumn>
       <TableRowColumn>{ parseStateFromDivision(ocdDivisionId) }</TableRowColumn>
     </TableRow>
