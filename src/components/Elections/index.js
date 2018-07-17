@@ -15,7 +15,7 @@ const parseStateFromDivision = (ocdDivisionId) => {
   var state = ocdDivisionId.split('state:');
   state = state[1] ? state[1].slice(0, 2).toUpperCase() : "";
   return state
-}
+};
 
 const Row = (props) => {
   const { name, electionDay, ocdDivisionId } = props;
