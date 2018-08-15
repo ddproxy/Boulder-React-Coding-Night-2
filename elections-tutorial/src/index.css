@@ -1,0 +1,23 @@
+body {
+  margin: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: space-around;
+}
+
+.App div {
+  width: 500px;
+}
+
+.OfficialList {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3, h4 {
+  cursor: pointer;
+}
