@@ -20,7 +20,7 @@
 * Inside the curly braces, add a render method: render() {}
 * Inside those curly braces, return a `<div>`: `return (<div></div>)`
 * Give the `<div>` a className of container: `<div className="container">`
-* Make 2 <p> elements with some dummy text (ie. Division 1 & Division 2)
+* Make 2 `<p>` elements with some dummy text (ie. Division 1 & Division 2)
 * Check the browser (should see p’s)
 
 ## Make an API call and set state
@@ -42,23 +42,23 @@
 ## Display state in the UI
 * Pass divisions into the <DivisionList> as props: `<DivisionList divisions={this.state.divisions} />`
 * Go to DivisionList.js
-* Remove the dummy <p> elements
+* Remove the dummy `<p>` elements
 * Assign divisions to a variable inside the render() method: `const divisions = this.props.divisions;`
 * Now, destructure that: `const { divisions } = this.props;`
-* Underneath the <h3>, put divisions inside { }
+* Underneath the `<h3>`, put divisions inside { }
 * Check the browser. What’s the problem?
 * Replace divisions with `Object.keys(divisions)` to make an array of keys for the object
-* Chain on a .map(), with a => function that takes a key and returns a <p> with the key inside
+* Chain on a .map(), with a => function that takes a key and returns a `<p>` with the key inside
 * The full line should look like this: `{Object.keys(divisions).map(key => <p>{key}</p>)}`
 * Check the browser. What’s going on?
 
 ## Create a functional component
-* Change the <p> to a new component: `<DivisionListItem />`
+* Change the `<p>` to a new component: `<DivisionListItem />`
 * Add division as a prop, and pass in divisions[key]: `division={divisions[key]}`
 * Above the DivisionList, create the new functional component: `const DivisionListItem = () => {}`
 * In the block of the function, return a <h3> wrapped in ( ): `return (<p></p>)`
 * Add props as an argument. How can we simplify this? Destructure: `({ division })`
-* Inside the <p>, add { } and division.name
+* Inside the `<p>`, add { } and division.name
 * Check the browser. Check the console. What’s wrong?
 * Add a key prop to DivisionListItem. Pass in key: `key={key}`
 * Handle a user selection. Create a new method above the render(): `handleSelectDivision = () => {}`
@@ -67,7 +67,7 @@
 * Below, add a key prop on DivisionListItem and pass in key: `divisionKey={key}`
 * Add the newly created method as a prop as well: `handleSelectDivision={this.handleSelectDivision}`
 * Above, inside DivisionListItem, add divisionKey and handleSelectDivision to the destructured props
-* Add onClick to the <p> and pass in an => function: `<p onClick={() => }>`
+* Add onClick to the `<p>` and pass in an => function: `<p onClick={() => }>`
 * In the => function, return an invocation of handleSelectDivision, passing in divisionKey: `() => handleSelectDivision(divisionKey)`
 * Check the browser. Click on a division. Check the console.
 
@@ -89,7 +89,7 @@
 * Move key={key} from DivisionListItem to the enclosing div
 
 ## Make a new component to display on selection
-* Change the dummy <p> to a component: `<OfficeList />`
+* Change the dummy `<p>` to a component: `<OfficeList />`
 * In app.js, pass the offices to <DivisionList />: `offices={this.state.offices}`
 * Back in DivisionList.js, add offices to the destructured props
 * Pass an offices prop to <OfficeList />: `offices={offices}`
@@ -112,7 +112,7 @@
 * Pass officialIndices as a prop: `officialIndices={office.officialIndices}`
 * Build that functional component above: `const OfficeListItem = () => {return (<p></p>)}`
 * Destructure office and officialIndices from props: `({ office, officialIndices })`
-* Add the office name inside the <h4>: `{office.name}`
+* Add the office name inside the `<h4>`: `{office.name}`
 * Check the browser. Check the console.
 * Add an event handler to the functional component: `<p onClick={() => handleSelectOffice(officialIndices)}>`
 * Add handleSelectOffice to the destructured props
@@ -151,12 +151,12 @@
 * Pass in the `{ official }`
 * Add a `<p>` inside the `<div>`, with it `{official.name}` inside
 * Check the browser. Try selecting an office.
-* Add more <p>’s with official.party and official.phones inside
-* Add an <img> with a source photo: `src={official.photoUrl}`
+* Add more `<p>`’s with official.party and official.phones inside
+* Add an `<img>` with a source photo: `src={official.photoUrl}`
 * Give it a size: `style={{ maxHeight: '300px' }}`
 * And an alt: `alt={official.name}`
 * Map over offical.urls: `{official.urls.map(url => }`
-* Return an <a> element with the href and value both equal to the url: `<a href={url}>{url}</a>`
+* Return an `<a>` element with the href and value both equal to the url: `<a href={url}>{url}</a>`
 * Check the browser.
 
 ## Add some styling
